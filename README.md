@@ -4,8 +4,8 @@ This regroups utilitary functions for Matlab.
 
 ## List of functions
 
-- `mkParentDir`: create parent directory.
-- `cached`: transform a function into a cached function.
+- [`mkParentDir`](#mkparentdir): create parent directory.
+- [`cached`](#cached): transform a function into a cached function.
 
 ## `mkParentDir`
 
