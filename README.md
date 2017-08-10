@@ -4,39 +4,39 @@ This regroups utilitary functions for Matlab.
 
 ## List of functions
 
-- mkParentDir: create parent directory.
-- cached: transform a function into a cached function.
+- `mkParentDir`: create parent directory.
+- `cached`: transform a function into a cached function.
 
-## mkParentDir
+## `mkParentDir`
 
 Create file parent directory if it does not already exist.
 
-### Syntax
+__Syntax__
 
 ```matlab
 mkParentDir( file_path );
 ```
 
-### Description
+__Description__
 
 ```matlab
 file_path: String. The path of the file of which we want to create parent dir.
 ```
 
-## cached
+## `cached`
 
 Transform a function into a cached function (result stored in a file).
 If the cache file already exists, returns the value inside this file.
 Otherwise, compute the function and also store results in cache file.
 Warning: this obviously is a side effect.
 
-### Syntax
+__Syntax__
 
 ```matlab
 [ output1, output2 ] = cached( cache_filepath, @myFunction, input1, input2 );
 ```
 
-### Description
+__Description__
 
 ```matlab
 cache_filepath: String.
