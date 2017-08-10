@@ -11,6 +11,7 @@ This regroups utilitary functions for Matlab.
 
 - [`mkParentDir`](#mkparentdir): create parent directory.
 - [`cached`](#cached): transform a function into a cached function.
+- [`sub2mask`](#sub2mask): generate a logical binary mask based on subscripts.
 
 ## `mkParentDir`
 
@@ -49,4 +50,25 @@ cache_filepath: String.
 @myFunction: @Function. The function to call.
 input#: inputs of the function.
 output#: outputs of the function.
+```
+
+
+## `sub2mask`
+
+Generate a binary mask (logical) true at the positions given in subscripts.
+Positions negative or higher than mask dimensions are filtered out.
+
+__Syntax__
+
+```matlab
+mask = sub2mask( mask_size, row_sub, col_sub );
+```
+
+__Description__
+
+```matlab
+mask_size: [ n_row, n_col ]. The size of the mask.
+row_sub: Int vector. The row coordinates of points.
+col_sub: Int vector. The column coordinates of points.
+mask: n_row x n_col logical array. The generated mask.
 ```
