@@ -12,6 +12,7 @@ This regroups utilitary functions for Matlab.
 - [`mkParentDir`](#mkparentdir): create parent directory.
 - [`cached`](#cached): transform a function into a cached function.
 - [`sub2mask`](#sub2mask): generate a logical binary mask based on subscripts.
+- [`evalBinaryClassif`](#evalbinaryclassif): compute precision, recall and jaccard index of a binary classification result.
 
 ## `mkParentDir`
 
@@ -71,4 +72,24 @@ mask_size: [ n_row, n_col ]. The size of the mask.
 row_sub: Int vector. The row coordinates of points.
 col_sub: Int vector. The column coordinates of points.
 mask: n_row x n_col logical array. The generated mask.
+```
+
+# `evalBinaryClassif`
+
+Compute the precision, recall and jaccard index of binary classification.
+
+__Syntax__
+
+```matlab
+[ precision, recall, jaccard ] = evalBinaryClassif( values, groundtruth );
+```
+
+__Description__
+
+```matlab
+values: logical tensor. The computed values to compare to ground truth.
+groundtruth: logical tensor. The ground truth reference.
+precision: double in [0,1]. TP / (TP + FP)
+recall: double in [0,1]. TP / (TP + FN)
+jaccard: double in [0,1]. TP / (TP + FP + FN)
 ```
